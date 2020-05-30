@@ -42,8 +42,8 @@ with conn:
     cur.execute("SELECT col_fname,col_ftype FROM tbl_files WHERE col_ftype = '.txt'")
     varFile = cur.fetchall()
     for item in varFile:
-        msg = "File Name: ()\nFile Type: ()".format(item[0],item[1])
-    print(msg)
+        msg = "File Name: {}\nFile Type: {}".format(item[0],item[1])
+        print(msg)
 conn.commit()
 conn.close()
 
