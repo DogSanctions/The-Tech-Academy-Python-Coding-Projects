@@ -7,9 +7,10 @@ class phone(ABC):
     @abstractmethod
     def payment(self, amount):
         pass
-    
-    class FinancedPayments(phone):
-        def payment(self, amount):
+
+    class FinancedPayments(ABC):
+        @staticmethod
+        def payment(amount):
             print('Or you can finance your new iPhone for 3 years for {} a month '.format(amount))
 
     obj = FinancedPayments()
