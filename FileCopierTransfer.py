@@ -10,5 +10,6 @@ for i in files:
     shutil.copy(source+i, destination)
     os.stat(path)
     
+    
    
   
